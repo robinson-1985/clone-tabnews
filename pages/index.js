@@ -1,5 +1,5 @@
 function Home(){
-    return <h1>A mente mais sábia ainda tem algo a aprender!🦉</h1>
+    return <h1>Aprender, é o que importa!🦉</h1>
             
 
 }
