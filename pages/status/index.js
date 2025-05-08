@@ -1,4 +1,4 @@
-import useSWR from "swr"
+import useSWR from "swr";
 
 async function fetchAPI(key) {
   const response = await fetch(key);
