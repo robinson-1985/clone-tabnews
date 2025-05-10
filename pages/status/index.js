@@ -28,11 +28,21 @@ function UpdateAt() {
 
   return (
     <div>
-      <p><strong>Última atualização:</strong> {updatedAt}</p>
-      <p><strong>Status do servidor:</strong> {data.status}</p>
-      <p><strong>Tempo de atividade:</strong> {data.uptime}</p>
-      <p><strong>Total de requisições:</strong> {data.requests}</p>
-      <p><strong>Versão:</strong> {data.version}</p>
+      <p>
+        <strong>Última atualização:</strong> {updatedAt}
+      </p>
+      <p>
+        <strong>Status do servidor:</strong> {data.status}
+      </p>
+      <p>
+        <strong>Tempo de atividade:</strong> {data.uptime}
+      </p>
+      <p>
+        <strong>Total de requisições:</strong> {data.requests}
+      </p>
+      <p>
+        <strong>Versão:</strong> {data.version}
+      </p>
     </div>
   );
 }
