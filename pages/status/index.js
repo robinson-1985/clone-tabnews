@@ -20,11 +20,29 @@ function UpdateAt() {
     refreshInterval: 2000,
   });
 
-  let updatedAtText = "Carregando...";
-
-  if (!isLoading && data) {
-    updatedAtText = new Date(data.updated_at).toLocaleString("pt-BR");
+  if (isLoading || !data) {
+    return <div>Carregando...</div>;
   }
 
-  return <div>Última atualização: {updatedAtText}</div>;
+  const updatedAt = new Date(data.updated_at).toLocaleString("pt-BR");
+
+  return (
+    <div>
+      <p>
+        <strong>Última atualização:</strong> {updatedAt}
+      </p>
+      <p>
+        <strong>Status do servidor:</strong> {data.status}
+      </p>
+      <p>
+        <strong>Tempo de atividade:</strong> {data.uptime}
+      </p>
+      <p>
+        <strong>Total de requisições:</strong> {data.requests}
+      </p>
+      <p>
+        <strong>Versão:</strong> {data.version}
+      </p>
+    </div>
+  );
 }
